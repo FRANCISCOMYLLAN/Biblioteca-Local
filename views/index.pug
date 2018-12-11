@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Biblioteca Local
+  p Bem-vindo ao # [em LocalLibrary], um site Express muito básico desenvolvido como um exemplo tutorial na biblioteca Mozilla Developer Network.
+
+  h1 Conteúdo dinâmico
+
+  if error
+    p Error getting dynamic content.
+  else
+    p A biblioteca tem as seguintes contagens de registros:
+
+    ul
+      li #[strong livros:] !{data.book_count}
+      li #[strong Cópais:] !{data.book_instance_count}
+      li #[strong Cópias Disponíveis:] !{data.book_instance_available_count}
+      li #[strong Autores:] !{data.author_count}
+      li #[strong Generos:] !{data.genre_count}
